@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "https://i.ibb.co/Z26m9Jv/card-6.jpg",
+      "recipe_id": 1,
+      "recipe_name": "Chicken Stir Fry",
+      "short_description": "Delicious chicken stir-fry with vegetables in a savory sauce.",
+      "ingredients": "<ul><li>. 550 g chicken</li><li>. 120 ml soy sauce</li><li>. 200 g basil leaf</li><li>. 400 g mushroom</li></ul>",
+      "preparing_time": "30 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_image": "image2.jpghttps://i.ibb.co/qJnKJZW/card-1.jpg",
+      "recipe_id": 2,
+      "recipe_name": "Vegetable Curry",
+      "short_description": "A flavorful vegetable curry packed with spices and served with rice.",
+      "ingredients": "<ul><li>. 300 g mixed vegetables</li><li>. 250 ml coconut milk</li><li>. 100 g curry paste</li><li>. 150 g rice</li></ul>",
+      "preparing_time": "45 min",
+      "calories": "280 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/mX56tjM/card-5.jpg",
+      "recipe_id": 3,
+      "recipe_name": "Pasta Primavera",
+      "short_description": "A light and fresh pasta dish loaded with seasonal vegetables and herbs.",
+      "ingredients": "<ul><li>. 400 g pasta</li><li>. 200 g cherry tomatoes</li><li>. 100 g spinach</li><li>. 50 g Parmesan cheese</li></ul>",
+      "preparing_time": "25 min",
+      "calories": "350 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/ZJP6g7c/card-4.jpg",
+      "recipe_id": 4,
+      "recipe_name": "Grilled Salmon",
+      "short_description": "Juicy grilled salmon fillets marinated in a zesty lemon herb sauce.",
+      "ingredients": "<ul><li>. 4 salmon fillets</li><li>. 100 ml lemon juice</li><li>. 50 g dill</li><li>. 30 g garlic</li></ul>",
+      "preparing_time": "20 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/vJFTB4G/card-3.jpg",
+      "recipe_id": 5,
+      "recipe_name": "Caprese Salad",
+      "short_description": "A classic Italian salad with fresh tomatoes, mozzarella, and basil, drizzled with balsamic glaze.",
+      "ingredients": "<ul><li>. 300 g cherry tomatoes</li><li>. 200 g fresh mozzarella</li><li>. 50 g basil leaves</li><li>. 30 ml balsamic glaze</li></ul>",
+      "preparing_time": "15 min",
+      "calories": "200 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/Yd9mxLj/card-2.jpg",
+      "recipe_id": 6,
+      "recipe_name": "Banana Bread",
+      "short_description": "Moist and flavorful banana bread with a hint of cinnamon, perfect for breakfast or snack.",
+      "ingredients": "<ul><li>. 3 ripe bananas</li><li>. 200 g flour</li><li>. 100 g sugar</li><li>. 50 g butter</li></ul>",
+      "preparing_time": "60 min",
+      "calories": "180 calories"
+    }
+  ]
+  
