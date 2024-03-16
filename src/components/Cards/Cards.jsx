@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
+
 import Card from "../Card/Card";
+import PropTypes from 'prop-types'
+
+const Cards = ({handleAddToCook, cook}) => {
 
 
-const Cards = () => {
-const [cards, setCards] = useState([]);
-
-useEffect(() => {
-fetch('./cards.json')
-.then((res) => res.json())
-.then((data) => setCards(data))
-
-})
 
     return (
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -18,11 +12,18 @@ fetch('./cards.json')
 
 
 {
-    cards.map((card) => <Card key={card.id} card={card}></Card>)
+    cook.map((card) => <Card key={card.recipe_id} card={card} handleAddToCook={handleAddToCook}></Card>)
 }
 
 </div>
     );
 };
+
+Cards.propTypes = {
+    handleAddToCook: PropTypes.func,
+    cook: PropTypes.array,
+
+  
+}
 
 export default Cards;

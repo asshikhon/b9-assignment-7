@@ -1,15 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './index.css'
 import Navbar from './components/Navbar/Navbar'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Cards from './components/Cards/Cards'
 import Cook from './components/Cook/Cook'
-import Card from './components/Card/Card'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cook, setCooking] = useState([]);
+  const [wontCook, setWontCook] = useState([]);
+const [preparing, setPreparing] = useState([]);
 
+  const handleAddToCook = (card) => {
+
+    const isExist = wontCook.find(item => item.recipe_id === card.recipe_id);
+  if(!isExist){
+    const newCook = [...wontCook, card];
+    setWontCook(newCook);
+  }else{
+    alert('already Exist')
+  }
+
+
+
+  }
+
+const handlePreparing = (preparingItem) => {
+const remainingItem = wontCook.filter(item => item.recipe_id !== preparingItem.recipe_id)
+setWontCook(remainingItem);
+setPreparing([...preparing, preparingItem]);
+
+}
+
+  useEffect(() => {
+    fetch('./cards.json')
+    .then((res) => res.json())
+    .then((data) => setCooking(data))
+    
+    }, [])
   return (
     <>
 <Navbar></Navbar>
@@ -23,12 +52,12 @@ Dive into Our Recipes, a treasure trove of culinary delights! From classic comfo
   </div>
 
   <div className='md:flex gap-8 lg:flex'>
-  <div className='w-3/5'>
-  <Cards></Cards>
+  <div className='lg:w-3/5'>
+  <Cards cook={cook} handleAddToCook={handleAddToCook}></Cards>
   </div>
 
 
-    <Cook></Cook>
+    <Cook handlePreparing={handlePreparing} wontCook={wontCook} preparing={preparing}></Cook>
   </div>
 
 
