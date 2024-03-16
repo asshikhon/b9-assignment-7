@@ -11,10 +11,10 @@ const Cooking = ({preparing}) => {
       <hr className="w-[60%] mx-auto" />
 
       <div className="overflow-x-auto rounded-xl">
-        <table className="table">
-          {/* head */}
+        <table className="table ">
+     
           <thead>
-            <tr>
+            <tr className=''>
               <th></th>
               <th className=" py-6 text-[#878787] text-base font-medium">Name</th>
               <th className=" py-6 text-[#878787] text-base font-medium">Time</th>
@@ -22,7 +22,7 @@ const Cooking = ({preparing}) => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
+   
             {preparing.map((item, index) => {
                 const {recipe_name, preparing_time, calories} = item;
               return (

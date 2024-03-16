@@ -5,7 +5,8 @@ import './App.css'
 import Banner from './components/Banner/Banner'
 import Cards from './components/Cards/Cards'
 import Cook from './components/Cook/Cook'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [cook, setCooking] = useState([]);
@@ -13,13 +14,14 @@ function App() {
 const [preparing, setPreparing] = useState([]);
 
   const handleAddToCook = (card) => {
-
+ 
     const isExist = wontCook.find(item => item.recipe_id === card.recipe_id);
   if(!isExist){
     const newCook = [...wontCook, card];
     setWontCook(newCook);
+    toast.success('Successfully Added');
   }else{
-    alert('already Exist')
+    toast.warn('Already Exist');
   }
 
 
@@ -30,7 +32,7 @@ const handlePreparing = (preparingItem) => {
 const remainingItem = wontCook.filter(item => item.recipe_id !== preparingItem.recipe_id)
 setWontCook(remainingItem);
 setPreparing([...preparing, preparingItem]);
-
+toast.success('Successfully Added For Cooking');
 }
 
   useEffect(() => {
@@ -58,6 +60,7 @@ Dive into Our Recipes, a treasure trove of culinary delights! From classic comfo
 
 
     <Cook handlePreparing={handlePreparing} wontCook={wontCook} preparing={preparing}></Cook>
+    <ToastContainer />
   </div>
 
 
