@@ -4,7 +4,7 @@ import Cooking from "../Cooking/Cooking";
 
 const Cook = ({ wontCook, handlePreparing, preparing}) => {
   return (
-    <div className="w-full lg:w-2/5 h-[895px] max-h-auto border-[1px] border-solid p-6 rounded-xl mt-4 lg:mt-0">
+    <div className="w-full lg:w-2/5 h-[895px] max-h-auto border-[1px] border-solid p-2 md:p-6 rounded-xl mt-4 lg:mt-0">
       <div className="">
         <h1 className="text-[#282828] text-2xl font-semibold text-center pb-4">
           Want to cook: {wontCook.length}
@@ -13,10 +13,10 @@ const Cook = ({ wontCook, handlePreparing, preparing}) => {
 
         <table className="ml-8">
           <thead>
-            <tr className="flex ">
+            <tr className="flex">
               <th className="flex py-6 p-4 lg:pl-10 text-[#878787]">Name</th>
-              <th className="flex py-6 p-4 lg:pl-20 text-[#878787]">Time</th>
-              <th className="flex py-6 p-4 lg:pl-10 text-[#878787]">Calories</th>
+              <th className="flex py-6 p-4 lg:pl-14 text-[#878787]">Time</th>
+              <th className="flex py-6 p-4 lg:pl-6 text-[#878787]">Calories</th>
             </tr>
           </thead>
         </table>

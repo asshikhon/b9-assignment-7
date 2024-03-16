@@ -7,9 +7,9 @@ const Addcook = ({addcook, index, handlePreparing}) => {
 
     return (
        
-        <div className=' '>
+        <div className=''>
         
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto w-auto">
   <table className="table">
 
     <tbody>
@@ -21,7 +21,7 @@ const Addcook = ({addcook, index, handlePreparing}) => {
         <td className='text-[#282828b3] text-[15px]'>{recipe_name}</td>
         <td className='text-[#282828b3] text-[15px]'>{preparing_time}</td>
         <td className='text-[#282828b3] text-[15px]'>{calories}</td>
-<td>        <button onClick={() => handlePreparing(addcook)} className='btn text-[#150B2B] bg-[#0BE58A] text-lg text-center font-semibold '>Preparing</button></td>
+<td>        <button onClick={() => handlePreparing(addcook)} className='btn text-[#150B2B] bg-[#0BE58A] text-lg text-center font-semibold rounded-3xl'>Preparing</button></td>
       </tr>
 
     </tbody>

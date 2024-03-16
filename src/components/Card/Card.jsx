@@ -13,7 +13,7 @@ const Card = ({ card, handleAddToCook }) => {
 
   return (
     <div>
-      <div className="card border-[1px] border-solid p-6 ">
+      <div className="card border-[1px] border-solid p-6 md:min-h-[830px] ">
         <figure className="">
           <img src={recipe_image} alt="Shoes" className="rounded-xl" />
         </figure>

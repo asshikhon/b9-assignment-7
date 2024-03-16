@@ -10,7 +10,7 @@ const Cooking = ({preparing}) => {
       </h1>
       <hr className="w-[60%] mx-auto" />
 
-      <div className="overflow-x-auto rounded-xl">
+      <div className="overflow-x-auto">
         <table className="table ">
      
           <thead>
