@@ -10,6 +10,6 @@ body{
 @tailwind utilities;
 
 .banner-image{
-background : linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, rgba(21, 11, 43, 0.00) 95%), url(../../../images/banner.jpeg) lightgray 0px -18.896px / 100% 123.31% no-repeat;
-
+background : linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, rgba(21, 11, 43, 0.00) 95%), url("../src/assets/images/banner.jpeg") lightgray 0px -18.896px / 100% 123.31%;
+background-repeat: no-repeat;
 }

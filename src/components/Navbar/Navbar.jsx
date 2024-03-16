@@ -33,11 +33,17 @@ const Navbar = () => {
       <div className="relative">
 <input className="bg-[#150b2b0d] rounded-[50px] w-[120px] lg:w-auto h-12 pl-10" type="text" placeholder=" Search"/>
 
-<img className="absolute left-3 bottom-3 text-[#424247]" src="../../../images/Frame -1.svg" alt="" />
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute bottom-3 left-3">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+
+
 
       </div>
 
-      <a className="bg-[#0BE58A] p-2 rounded-[50%]" href=""><img src="../../../images/Frame-2.svg" alt="" /> </a>
+      <a className="bg-[#0BE58A] p-2 rounded-[50%]" href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+</svg> </a>
         </div>
       </div>
         </div>
