@@ -55,7 +55,7 @@ const Card = ({ card, handleAddToCook }) => {
               />
             </svg>
 
-            <p>{preparing_time}</p>
+            <p>{preparing_time} minutes</p>
           </div>
 
           <div className="flex items-center gap-2 py-6">
@@ -78,7 +78,7 @@ const Card = ({ card, handleAddToCook }) => {
                 d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
               />
             </svg>
-            <p>{calories}</p>
+            <p>{calories} calories</p>
           </div>
         </div>
 

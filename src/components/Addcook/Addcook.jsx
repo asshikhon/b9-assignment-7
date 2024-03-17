@@ -19,8 +19,8 @@ const Addcook = ({addcook, index, handlePreparing}) => {
         
  <td className='text-base font-semibold'>{index+1}</td>
         <td className='text-[#282828b3] text-[15px]'>{recipe_name}</td>
-        <td className='text-[#282828b3] text-[15px]'>{preparing_time}</td>
-        <td className='text-[#282828b3] text-[15px]'>{calories}</td>
+        <td className='text-[#282828b3] text-[15px]'>{preparing_time} minutes</td>
+        <td className='text-[#282828b3] text-[15px]'>{calories} calories</td>
 <td>        <button onClick={() => handlePreparing(addcook)} className='btn text-[#150B2B] bg-[#0BE58A] text-lg text-center font-semibold rounded-3xl'>Preparing</button></td>
       </tr>
 

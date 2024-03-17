@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import Addcook from "../Addcook/Addcook";
 import Cooking from "../Cooking/Cooking";
 
-const Cook = ({ wontCook, handlePreparing, preparing}) => {
+const Cook = ({ wontCook, handlePreparing, preparing, calories, time}) => {
   return (
-    <div className="w-full lg:w-2/5 h-[895px] max-h-auto border-[1px] border-solid p-2 md:p-6 rounded-xl mt-4 lg:mt-0">
+    <div className="w-full  min-h-[830px] max-h-auto border-[1px] border-solid p-2 md:p-6 rounded-xl mt-4 lg:mt-0">
       <div className="">
         <h1 className="text-[#282828] text-2xl font-semibold text-center pb-4">
           Want to cook: {wontCook.length}
@@ -27,6 +27,18 @@ const Cook = ({ wontCook, handlePreparing, preparing}) => {
 
 <Cooking preparing={preparing}></Cooking>
       </div>
+
+      <div className="flex justify-end mt-12 gap-6 mr-5">
+            <h2 className="text-base font-medium text-[#282828cc]">
+              Total Time =
+              <br />
+              {time} minutes
+            </h2>
+            <h2 className="text-base font-medium text-[#282828cc]">
+              Total Calories =
+              <br /> {calories} calories
+            </h2>
+          </div>
     </div>
   );
 };
@@ -35,7 +47,8 @@ Cook.propTypes = {
   wontCook: PropTypes.array,
   handlePreparing: PropTypes.func,
   preparing: PropTypes.array,
-
+time: PropTypes.any,
+calories: PropTypes.any,
 
 };
 

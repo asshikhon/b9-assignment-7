@@ -12,6 +12,8 @@ function App() {
   const [cook, setCooking] = useState([]);
   const [wontCook, setWontCook] = useState([]);
 const [preparing, setPreparing] = useState([]);
+const [time, setTime] = useState(0);
+const [calories, setCalories] = useState(0);
 
   const handleAddToCook = (card) => {
  
@@ -24,15 +26,22 @@ const [preparing, setPreparing] = useState([]);
     toast.warn('Already Exist');
   }
 
-
-
   }
 
 const handlePreparing = (preparingItem) => {
+  
 const remainingItem = wontCook.filter(item => item.recipe_id !== preparingItem.recipe_id)
 setWontCook(remainingItem);
 setPreparing([...preparing, preparingItem]);
 toast.success('Successfully Added For Cooking');
+
+const newTime = (parseInt(time) + parseInt(preparingItem.preparing_time));
+setTime(newTime);
+
+const newCalories = (parseInt(calories) + parseInt(preparingItem.calories));
+setCalories(newCalories);
+
+
 }
 
   useEffect(() => {
@@ -53,18 +62,21 @@ Dive into Our Recipes, a treasure trove of culinary delights! From classic comfo
   
   </div>
 
-  <div className='md:flex gap-8 lg:flex'>
-  <div className='lg:w-3/5'>
+  <div className='md:flex gap-8 lg:flex '>
+  <div className='md:w-3/5'>
   <Cards cook={cook} handleAddToCook={handleAddToCook}></Cards>
   </div>
 
 
-    <Cook handlePreparing={handlePreparing} wontCook={wontCook} preparing={preparing}></Cook>
-    <ToastContainer />
+<div className=' flex-1'>
+<Cook calories={calories} time={time} handlePreparing={handlePreparing} wontCook={wontCook} preparing={preparing}></Cook>
+
+</div>
+ 
   </div>
 
 
-
+  <ToastContainer />
     </>
   )
 }

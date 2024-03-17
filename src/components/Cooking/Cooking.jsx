@@ -29,8 +29,8 @@ const Cooking = ({preparing}) => {
                 <tr key={item.recipe_id} className="bg-base-200">
                   <th className='text-base font-semibold'>{index+1}</th>
                   <td className='text-[#282828b3] text-base mb-3'>{recipe_name}</td>
-                  <td className='text-[#282828b3] text-base mb-3'>{preparing_time}</td>
-                  <td className='text-[#282828b3] text-base mb-3'>{calories}</td>
+                  <td className='text-[#282828b3] text-base mb-3'>{preparing_time} minutes</td>
+                  <td className='text-[#282828b3] text-base mb-3'>{calories} calories</td>
                 </tr>
               );
             })}
